@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage 
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:viewmodel="clr-namespace:CommToolMauiApp.ViewModels"
+    x:Class="CommToolMauiApp.Views.DetailPage"             
+    x:DataType="viewmodel:DetailViewModel"
+    Title="DetailPage">
+
+    <StackLayout Padding="40">
+        <Label 
+            Text="{Binding Item.Id}"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center"
+            FontSize="10"/>
+        <Label 
+            Text="{Binding Item.CreationDate}"
+            VerticalOptions="Center"
+            HorizontalOptions="Center"
+            FontSize="10"/>
+        <Label 
+            Text="{Binding Item.Title}"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center"
+            FontSize="30"
+            Padding="30"/>
+        <Button
+            Text="Go Back"
+            Command="{Binding BackCommand}"
+            HorizontalOptions="Center"/>
+        <Button
+            Text="Go to Another Page"
+            Command="{Binding GoToAnotherCommand}"
+            HorizontalOptions="Center"/>
+    </StackLayout>
+</ContentPage>
