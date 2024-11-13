@@ -30,14 +30,14 @@
             ItemsSource="{Binding Items}">
             <CollectionView.ItemTemplate>
                 <DataTemplate x:DataType="model:Item">
-                    <Frame
+                    <Border
                         HeightRequest="70"
                         Padding="5">
-                        <Frame.GestureRecognizers>
+                        <Border.GestureRecognizers>
                             <TapGestureRecognizer
                                 Command="{Binding Source={RelativeSource AncestorType={x:Type viewmodel:MainViewModel}}, Path=NavigateCommand}"
                                 CommandParameter="{Binding .}"/>
-                        </Frame.GestureRecognizers>
+                        </Border.GestureRecognizers>
                         <Grid
                             Padding="5, 0" 
                             ColumnDefinitions="*, .25*">
@@ -52,7 +52,7 @@
                                 Command="{Binding Source={RelativeSource AncestorType={x:Type viewmodel:MainViewModel}}, Path=RemoveCommand}"
                                 CommandParameter="{Binding .}"/>
                         </Grid>
-                    </Frame>
+                    </Border>
                 </DataTemplate>
             </CollectionView.ItemTemplate>
             <CollectionView.EmptyView>

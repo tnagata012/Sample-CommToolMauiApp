@@ -1,5 +1,4 @@
 ﻿using System.Collections.ObjectModel;
-using System.ComponentModel.DataAnnotations;
 using CommToolMauiApp.Model;
 using CommToolMauiApp.Views;
 using CommunityToolkit.Mvvm.ComponentModel;
@@ -10,7 +9,7 @@ namespace CommToolMauiApp.ViewModels;
 public partial class MainViewModel : ObservableValidator
 {
     [ObservableProperty]
-    private ObservableCollection<Item> _items = new();
+    private ObservableCollection<Item> _items = [];
 
     [ObservableProperty]
     private string _text;

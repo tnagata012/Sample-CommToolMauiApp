@@ -9,7 +9,7 @@ public partial class CounterViewModel : ObservableObject
     [NotifyPropertyChangedFor(nameof(Rotation))]
     private int _count;
 
-    public double Rotation => _count % 360;
+    public double Rotation => Count % 360;
 
     [RelayCommand]
     private void Increment()

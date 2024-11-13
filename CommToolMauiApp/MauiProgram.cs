@@ -1,5 +1,6 @@
 ﻿using CommToolMauiApp.ViewModels;
 using CommToolMauiApp.Views;
+using Microsoft.Extensions.Logging;
 
 namespace CommToolMauiApp;
 
@@ -28,6 +29,10 @@ public static class MauiProgram
         builder.Services.AddSingleton<CounterPage>();
         builder.Services.AddTransient<NetworkCheckPage>();
         builder.Services.AddSingleton<FlexLayoutPage>();
+
+#if DEBUG
+        builder.Logging.AddDebug();
+#endif
 
         return builder.Build();
     }
