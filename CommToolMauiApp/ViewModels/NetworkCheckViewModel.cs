@@ -17,7 +17,8 @@ public partial class NetworkCheckViewModel : ObservableObject
     private async Task CheckInternetAsync()
     {
         var hasInternet = _connectivity?.NetworkAccess == NetworkAccess.Internet;
-        await Application.Current.MainPage.DisplayAlert("Has Internet", hasInternet ? "YES!" : "NO!", "OK");
+        var mainPage = Application.Current.Windows[0].Page;
+        await mainPage.DisplayAlert("Has Internet", hasInternet ? "YES!" : "NO!", "OK");
     }
 
     [RelayCommand]
