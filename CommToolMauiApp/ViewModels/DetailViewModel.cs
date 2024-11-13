@@ -9,7 +9,7 @@ namespace CommToolMauiApp.ViewModels;
 public partial class DetailViewModel : ObservableObject
 {
     [ObservableProperty]
-    private Item _item;
+    public partial Item Item { get; set; }
 
     [RelayCommand]
     private async Task BackAsync()
