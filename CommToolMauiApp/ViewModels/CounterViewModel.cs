@@ -7,7 +7,7 @@ public partial class CounterViewModel : ObservableObject
 {
     [ObservableProperty]
     [NotifyPropertyChangedFor(nameof(Rotation))]
-    private int _count;
+    public partial int Count { get; set; }
 
     public double Rotation => Count % 360;
 

@@ -9,10 +9,10 @@ namespace CommToolMauiApp.ViewModels;
 public partial class MainViewModel : ObservableValidator
 {
     [ObservableProperty]
-    private ObservableCollection<Item> _items = [];
+    public partial ObservableCollection<Item> Items { get; set; } = [];
 
     [ObservableProperty]
-    private string _text;
+    public partial string Text { get; set; }
 
     [RelayCommand]
     private void Add()
